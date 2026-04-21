@@ -74,6 +74,73 @@ The application follows **MVC Architecture**:
 
 ---
 
+## 🗄️ Database Design
+
+The application uses **MySQL** with relational mapping implemented using **Hibernate (JPA)**. 
+---
+
+### 📌 Entities Overview
+
+#### 🔹 User
+- id (Primary Key)
+- name
+- email (Unique)
+- password
+- role (ADMIN / DEVELOPER / TESTER)
+
+---
+
+#### 🔹 Project
+- id (Primary Key)
+- name
+- description
+- createdDate
+
+---
+
+#### 🔹 Bug
+- id (Primary Key)
+- title
+- description
+- priority (LOW, MEDIUM, HIGH, CRITICAL)
+- status (OPEN, IN_PROGRESS, RESOLVED, CLOSED)
+- createdDate
+- project_id (Foreign Key)
+- reporter_id (Foreign Key → User)
+- developer_id (Foreign Key → User)
+
+---
+
+#### 🔹 Comment
+- id (Primary Key)
+- message
+- createdDate
+- bug_id (Foreign Key)
+- user_id (Foreign Key)
+
+---
+
+### 🔗 Relationships
+
+- One **Project** → Many **Bugs**  
+- One **User (Reporter)** → Many **Reported Bugs**  
+- One **User (Developer)** → Many **Assigned Bugs**  
+- One **Bug** → Many **Comments**  
+- One **User** → Many **Comments**
+
+---
+
+### 🧠 ORM Mapping (JPA)
+
+- `@OneToMany` → Project → Bugs  
+- `@ManyToOne` → Bug → Project  
+- `@ManyToOne` → Bug → User (Reporter & Developer)  
+- `@OneToMany` → Bug → Comments  
+- `@ManyToOne` → Comment → Bug  
+- `@ManyToOne` → Comment → User  
+
+---
+
 ## 📁 Project Structure
 
 ```
