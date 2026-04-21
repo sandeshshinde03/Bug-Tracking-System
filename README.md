@@ -76,6 +76,7 @@ The application follows **MVC Architecture**:
 
 ## 📁 Project Structure
 
+```
 bugtracker/
 │── src/main/java/com/bugtracker
 │   ├── controller
@@ -96,3 +97,4 @@ bugtracker/
 │
 │── application.properties
 │── pom.xml
+```
