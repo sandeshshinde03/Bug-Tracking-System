@@ -7,6 +7,33 @@ This system improves **software quality, team collaboration, and project transpa
 
 ---
 
+## 🚀 Live Demo
+
+🔗 **Deployed Application:**  
+https://bugtracker-vjij.onrender.com
+
+👉 **Try the project here:**  
+[Bug Tracking System Live](https://bugtracker-vjij.onrender.com)
+
+> ⚠️ Note: The app may take 30–60 seconds to load initially because it is hosted on Render's free tier.
+
+## 🔑 Demo Credentials
+
+Use these test accounts to explore the system:
+### Admin
+- **Email:** admin@gmail.com  
+- **Password:** ********
+  
+### Developer
+- **Email:** developer@gmail.com  
+- **Password:** developer  
+
+### Tester
+- **Email:** tester@gmail.com
+- **Password:** tester
+
+---
+
 ## 🎯 Key Features
 
 - 👤 **User Roles & Authentication**
