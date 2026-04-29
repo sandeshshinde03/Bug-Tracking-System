@@ -70,7 +70,8 @@ Use these test accounts to explore the system:
 - Bootstrap 5
 
 ### Database:
-- MySQL
+- MySQL (Development)
+- PostgreSQL (Deployment)
 
 ### Tools:
 - Maven
